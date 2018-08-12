@@ -29,7 +29,12 @@ var powerSet = function(str) {
       if (tempArr.length > 0) removeLetter(tempArr.join(''))
     }
   }
-  removeLetter(str)
+  removeLetter(
+    str
+      .split('')
+      .sort()
+      .join('')
+  )
 
   let result = []
   let set = new Set(output)
